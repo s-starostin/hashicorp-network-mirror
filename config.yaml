@@ -1,0 +1,50 @@
+ssl_enabled: True
+ssl_check_hostname: False
+ssl_server_cert: server-cert.pem
+ssl_server_cert_key: server-key.pem
+
+host: ''
+port: 443
+
+directory: files
+providers_subpath: /providers/
+
+routes:
+  registry.terraform.io/hashicorp/aci: terraform-provider-aci
+  registry.terraform.io/hashicorp/ad: terraform-provider-ad
+  registry.terraform.io/hashicorp/archive: terraform-provider-archive
+  registry.terraform.io/hashicorp/aws: terraform-provider-aws
+  registry.terraform.io/hashicorp/awscc: terraform-provider-awscc
+  registry.terraform.io/hashicorp/azuread: terraform-provider-azuread
+  registry.terraform.io/hashicorp/azurerm: terraform-provider-azurerm
+  registry.terraform.io/hashicorp/azurestack: terraform-provider-azurestack
+  registry.terraform.io/hashicorp/boundary: terraform-provider-boundary
+  registry.terraform.io/hashicorp/cloudinit: terraform-provider-cloudinit
+  registry.terraform.io/hashicorp/consul: terraform-provider-consul
+  registry.terraform.io/hashicorp/dns: terraform-provider-dns
+  registry.terraform.io/hashicorp/external: terraform-provider-external
+  registry.terraform.io/hashicorp/google: terraform-provider-google
+  registry.terraform.io/hashicorp/google-beta: terraform-provider-google-beta
+  registry.terraform.io/hashicorp/googleworkspace: terraform-provider-googleworkspace
+  registry.terraform.io/hashicorp/hcp: terraform-provider-hcp
+  registry.terraform.io/hashicorp/hcs: terraform-provider-hcs
+  registry.terraform.io/hashicorp/helm: terraform-provider-helm
+  registry.terraform.io/hashicorp/http: terraform-provider-http
+  registry.terraform.io/hashicorp/kubernetes: terraform-provider-kubernetes
+  registry.terraform.io/hashicorp/kubernetes-alpha: terraform-provider-kubernetes-alpha
+  registry.terraform.io/hashicorp/local: terraform-provider-local
+  registry.terraform.io/hashicorp/nomad: terraform-provider-nomad
+  registry.terraform.io/hashicorp/null: terraform-provider-null
+  registry.terraform.io/hashicorp/oci: terraform-provider-oci
+  registry.terraform.io/hashicorp/opc: terraform-provider-opc
+  registry.terraform.io/hashicorp/oraclepaas: terraform-provider-oraclepaas
+  registry.terraform.io/hashicorp/random: terraform-provider-random
+  registry.terraform.io/hashicorp/salesforce: terraform-provider-salesforce
+  registry.terraform.io/hashicorp/template: terraform-provider-template
+  registry.terraform.io/hashicorp/terraform: terraform-provider-terraform
+  registry.terraform.io/hashicorp/tfe: terraform-provider-tfe
+  registry.terraform.io/hashicorp/time: terraform-provider-time
+  registry.terraform.io/hashicorp/tls: terraform-provider-tls
+  registry.terraform.io/hashicorp/vault: terraform-provider-vault
+  registry.terraform.io/hashicorp/vsphere: terraform-provider-vsphere
+  registry.terraform.io/hashicorp/hashicups: terraform-provider-hashicups
