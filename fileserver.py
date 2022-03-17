@@ -117,6 +117,7 @@ def get_args(args=None):
     parser.add_argument('-d', '--directory', type=str, default='files')
     parser.add_argument('-H', '--host', type=str, default='localhost')
     parser.add_argument('-p', '--port', type=int, default=80)
+    parser.add_argument('--providers-subpath', type=str, default='/providers/')
     parser.add_argument('--ssl-enabled', type=bool, default=False)
     parser.add_argument('--ssl-check-hostname', type=bool, default=False)
     parser.add_argument('--ssl-server-cert', type=str, default='server-cert.pem')
@@ -129,6 +130,7 @@ if __name__ == '__main__':
 
     c = get_args(sys.argv[1:])
 
+    c["routes"] = {}
     with open(c["config_file"], 'r') as f:
         conf = yaml.safe_load(f)
         for key in ['routes', 'host', 'port', 'directory', 'providers_subpath',
