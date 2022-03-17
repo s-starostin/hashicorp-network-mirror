@@ -49,7 +49,7 @@ class HTTPHandler(SimpleHTTPRequestHandler):
     # holds available archives to download (platform specific) with their hash calculated using contents.
     # After that it gets the provider archive.
     # --
-    # If the path is not containing providers_subpath do_GET serves like a simple HTTP file server.
+    # If the path doesn't contain providers_subpath, do_GET serves like in a regular HTTP file server.
     def do_GET(self):
         if self.path.startswith(self.providers_subpath):
             target = self.path.rsplit('/', 1)[1]
