@@ -9,7 +9,7 @@ This proxy acts like an ordinary file server for given directory root, but if yo
 
 The content according to the mirror specification must be served over HTTPS. So, you can create self-signed certificates using `setup-ssl-certificates.sh`, but this proxy can be run without HTTPS also. You can set up caching proxy like nginx in front of this server with [SSL termination](https://www.f5.com/services/resources/glossary/ssl-termination) and configure caching for generated JSON files. Notice that by default this proxy is running on either 80 or 443 port which are [priveleged ports](https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html).
 
-This proxy calculates [HashZip](https://pkg.go.dev/golang.org/x/mod/sumdb/dirhash#HashZip) for each zip archive on the fly in the way `terraform providers mirror` does.
+This proxy calculates [hashes](https://www.terraform.io/internals/provider-network-mirror-protocol#hashes) for each zip archive on the fly using Terraform's provider package hashing algorithm, using [HashZip](https://pkg.go.dev/golang.org/x/mod/sumdb/dirhash#HashZip), the same way `terraform providers mirror` command does.
 
 CLI-parameters
 ----------------
