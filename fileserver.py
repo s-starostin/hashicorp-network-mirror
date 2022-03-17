@@ -46,7 +46,7 @@ class HTTPHandler(SimpleHTTPRequestHandler):
 
     # Terraform uses index.json to get available versions for selected provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/index.json).
     # The next query selects specific version of  terraform provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/2.0.1.json) which
-    # holds available archives to download (platform specific) with their hash calculated using contents.
+    # returns available archives to download (platform specific) and calculated hashes of their contents.
     # After that it gets the provider's archive.
     # --
     # If the path doesn't contain providers_subpath, do_GET serves like in a regular HTTP file server.
