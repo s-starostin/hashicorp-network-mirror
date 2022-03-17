@@ -15,7 +15,7 @@ CLI-parameters
 ----------------
 | Argument | Default | Comment |
 | ------ | ------- | ------- |
-| --config-file, -c | config.yaml | path where the server configuration file resides |
+| --config-file, -c | config.yaml | server configuration file path |
 | --directory, -d | files | directory to serve |
 | --host, -H | localhost | server host |
 | --port, -p | 80 | server port |
