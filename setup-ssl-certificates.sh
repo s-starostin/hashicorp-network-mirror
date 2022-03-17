@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #creating CA private key and certificate
 openssl genrsa 2048 > ca-key.pem
 openssl req -new -x509 -nodes -days 3650 -key ca-key.pem -subj "/C=RU/O=Net Lan/CN=net.lan" -out ca-cert.crt
