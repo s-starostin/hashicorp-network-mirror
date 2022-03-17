@@ -44,7 +44,7 @@ class HTTPHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(bytes('{}'.encode('UTF-8')))
 
-    # Terraform uses index.json to get available versions for selected provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/index.json).
+    # Terraform uses index.json to get available versions of selected provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/index.json).
     # The next query selects specific version of the terraform provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/2.0.1.json) which
     # returns available archives to download (platform specific) and calculated hashes of their contents.
     # After that it gets the provider's archive.
