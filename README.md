@@ -5,7 +5,7 @@ If you have HTTP file server with some terraform providers and directory structu
 , you can use this to build the network mirror (https://www.terraform.io/internals/provider-network-mirror-protocol).
 
 You'll have to define routes in `routes` in `config.yaml` to setup mapping according to your server catalog structure.
-This proxy acts like an ordinary file server for given directory root, but if you declare `providers_subpath` and `routes` it'll act like terraform network mirror.
+By default this proxy configured to act as a terraform network mirror, but if you comment out `providers_subpath` and `routes` it will act as http file server for directory defined in `directory`.
 
 According to the mirror specification protocol the content must be served over HTTPS. To meet this requirement you can create self-signed certificates using `setup-ssl-certificates.sh`, but this proxy can also run as HTTP server.\
 To configure caching of generated JSON files to speed up performance, a caching proxy with [SSL termination](https://www.f5.com/services/resources/glossary/ssl-termination) (such as nginx) can be set up in front of this server.
