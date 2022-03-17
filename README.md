@@ -4,7 +4,7 @@ Registry proxy server for Hashicorp Terraform.\
 If you have HTTP file server with some terraform providers and directory structure like this: https://somedomain.com/terraform-provider-vault/3.3.1/terraform-provider-vault_3.3.1_linux_amd64.zip
 , you can use this to build the network mirror (https://www.terraform.io/internals/provider-network-mirror-protocol).
 
-You'll have to define routes to setup mapping according to your server catalog structure, checkout `config.yaml`.
+You'll have to define routes in `routes` in `config.yaml` to setup mapping according to your server catalog structure.
 This proxy acts like an ordinary file server for given directory root, but if you declare `providers_subpath` and `routes` it'll act like terraform network mirror.
 
 According to the mirror specification protocol the content must be served over HTTPS. To meet this requirement you can create self-signed certificates using `setup-ssl-certificates.sh`, but this proxy can also run as HTTP server.\
