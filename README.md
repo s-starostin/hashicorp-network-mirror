@@ -20,6 +20,6 @@ CLI-parameters
 | --host, -H | localhost | server host |
 | --port, -p | 80 | server port |
 | --ssl-enabled | False | use HTTPS |
-| --ssl-check-hostname | False | [enable hostname checking](https://docs.python.org/3/library/ssl.html#ssl.SSLContext.check_hostname) |    
+| --ssl-check-hostname | False | enable [hostname checking](https://docs.python.org/3/library/ssl.html#ssl.SSLContext.check_hostname) |    
 | --ssl-server-cert | server-cert.pem | server certificate file |
 | --ssl-server-cert-key | server-key.pem | server certificate key file |
