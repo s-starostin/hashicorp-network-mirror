@@ -44,6 +44,12 @@ class HTTPHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(bytes('{}'.encode('UTF-8')))
 
+    # Terraform uses index.json to get available versions for selected provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/index.json).
+    # The next query selects specific version of  terraform provider (https://<hostname>/<providers>/registry.terraform.io/hashicorp/aci/2.0.1.json) which
+    # holds available archives to download (platform specific) with their hash calculated using contents.
+    # After that it gets the provider archive.
+    # --
+    # If the path is not containing providers_subpath do_GET serves like a simple HTTP file server.
     def do_GET(self):
         if self.path.startswith(self.providers_subpath):
             target = self.path.rsplit('/', 1)[1]
@@ -123,8 +129,6 @@ if __name__ == '__main__':
 
     c = get_args(sys.argv[1:])
 
-    routes = {}
-    providers_subpath = '/providers/'
     with open(c["config_file"], 'r') as f:
         conf = yaml.safe_load(f)
         for key in ['routes', 'host', 'port', 'directory', 'providers_subpath',

@@ -2,10 +2,10 @@ import hashlib
 from base64 import b64encode
 from zipfile import ZipFile
 
-def hash_zip(filename):
+def hash_zip(filepath):
     h1 = hashlib.sha256()
 
-    with ZipFile(filename, 'r') as zf:
+    with ZipFile(filepath, 'r') as zf:
         for zfilename in zf.namelist():
             with zf.open(zfilename) as f:
                 h = hashlib.sha256()

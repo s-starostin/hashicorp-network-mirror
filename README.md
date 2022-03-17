@@ -1,4 +1,5 @@
-# hashicorp-proxy
+hashicorp-proxy
+=========
 Registry proxy server for Hashicorp Terraform.\
 If you have HTTP file server with some terraform providers and directory structure like this: https://somedomain.com/terraform-provider-vault/3.3.1/terraform-provider-vault_3.3.1_linux_amd64.zip
 , you can use this to build the network mirror (https://www.terraform.io/internals/provider-network-mirror-protocol).
@@ -10,7 +11,8 @@ The content according to the mirror specification must be served over HTTPS. So,
 
 This proxy calculates [HashZip](https://pkg.go.dev/golang.org/x/mod/sumdb/dirhash#HashZip) for each zip archive on the fly in the way `terraform providers mirror` does.
 
-##CLI-parameters
+CLI-parameters
+----------------
 | Argument | Default | Comment |
 | ------ | ------- | ------- |
 | --config-file, -c | config.yaml | path where the server configuration file resides |

@@ -10,7 +10,6 @@ directory: files
 providers_subpath: /providers/
 
 routes:
-  registry.terraform.io/hashicorp/aci: terraform-provider-aci
   registry.terraform.io/hashicorp/ad: terraform-provider-ad
   registry.terraform.io/hashicorp/archive: terraform-provider-archive
   registry.terraform.io/hashicorp/aws: terraform-provider-aws
